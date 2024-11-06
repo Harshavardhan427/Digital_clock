@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #1a1a1a;
+    color: #00ffcc;
+}
+
+.clock {
+    text-align: center;
+    border: 2px solid #00ffcc;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 255, 204, 0.7);
+}
+
+.time, .date {
+    font-size: 3em;
+    margin: 10px 0;
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+.time {
+    animation-delay: 0.1s;
+}
+
+.date {
+    font-size: 1.5em;
+    color: #cccccc;
+    animation-delay: 0.2s;
+}
+
+/* Animation for fade-in effect */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(-10px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Blinking colon animation */
+#time span.blink {
+    animation: blink 1s steps(1, end) infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
